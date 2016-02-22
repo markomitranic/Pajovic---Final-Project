@@ -1,8 +1,5 @@
-var WindowFrame = $(window);
-//LISTENER
-WindowFrame.on('resize load', function() {
-	Scaffolder.calc();
-});
+// This document is used for executing certain
+// functions only on certain window sizes.
 
 var Scaffolder = {
 	articles: $('#posts article'),
@@ -28,6 +25,23 @@ var Scaffolder = {
 		mobileMenu.positionCenter(); //Scroll the menu to make the active item central in view
 	},
 }
+
+
+
+//
+
+
+// We cache the window frame object for a bit of speed.
+var WindowFrame = $(window);
+
+
+// Also, we need to add a listener for resize,
+//which will call the Scaffolder function
+//each time window is resized
+WindowFrame.on('resize load', function() {
+	Scaffolder.calc();
+});
+
 
 //Add animated scroll to the Back To Top arrow.
 $('#upArrow').on('click', function(e) {

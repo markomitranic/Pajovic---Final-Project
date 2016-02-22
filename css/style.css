@@ -31,6 +31,16 @@ h1 {
     right: 0px;
     display: block;
 }
+h2 {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h3, h4, h5, h6 {
+    color: #4A4A4A;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 /* 2. Sidebar/Menu */
 /* Styles for Main menu / Sidebar on desktop. */
@@ -257,4 +267,57 @@ footer p {
 
 /* 7. BLOG PAGE CONTENT SECTION */
 
+.post {
 
+}
+.post header h1 {
+    text-transform: none;
+}
+#container {
+    width: 600px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+#container p {
+    font-size: 14px;
+    color: #4A4A4A;
+    font-weight: 300;
+}
+#container img {
+    max-width: 100%;
+    margin: 14px 0;
+}
+#container blockquote {
+    border-left: 2px solid rgb(193, 193, 193);
+    padding: 20px 0 20px 20px;
+    margin: 14px 0px;
+    background-color: #F8FDFF;
+    font-size: 14px;
+    font-weight: 300;
+}
+#container blockquote p {
+    color: black;
+    font-style: italic;
+}
+#container pre {
+    border-left: 2px solid #BDCAC1;
+    padding: 20px 0 20px 20px;
+    margin: 14px 0px;
+    background-color: #F4FBF9;
+    font-size: 14px;
+    font-weight: 300;
+    color: #CEB2B2;
+    overflow-x: scroll; 
+}
+#container pre p {
+    color: #CEB2B2;
+}
+#container ul {
+    list-style-type: none;
+    padding: 0;
+}
+#container li {
+    border-left: 2px solid rgb(193, 193, 193);
+    padding: 0 0 0 20px;
+    margin: 5px 0;
+}
