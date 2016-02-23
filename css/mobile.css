@@ -115,9 +115,28 @@ main header {
     margin: 50px auto;
 }
 #container {
-    padding-left: 0px;
+    max-width: 640px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#container p {
+    font-size: 14px;
+    line-height: 21px;
 }
 
+/* 8. LANDING PAGE INTERACTIVE HERO */
+/* The langing page has a special box with an animated hero in it. */
+#landingHero {
+    max-width: 640px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#landingHero .fallback {
+    height: auto;
+    max-width: 100%;
+}
 
 } /* End of TABLET! */
 
@@ -130,6 +149,14 @@ h1 {
 	font-size: 2.6rem;
     text-align: center;
     line-height: 3rem;
+    color: white;
+}
+h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+main>header {
+    padding: 50px 0;
+    background-color: #DAE6E1; // #dadada
 }
 #logo {
     display: none;
@@ -186,6 +213,9 @@ h1 {
     right: 0;
     padding: 0;
 }
+#posts article .postThumbnail header h2 {
+    text-align: left;
+}
 #posts article .postThumbnail::after {
     content: "";
     display: block;
@@ -225,9 +255,6 @@ h1 {
     padding: 0 10px;
     box-sizing: border-box;
 }
-
-
-
 
 
 

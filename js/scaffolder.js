@@ -15,7 +15,7 @@ var Scaffolder = {
 		}
 	},
 	setDesktop: function() {
-
+		landingHeroInit();
 	},
 	setTablet: function() {
 

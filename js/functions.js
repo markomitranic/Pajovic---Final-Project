@@ -29,7 +29,7 @@ function escapeHtml() {
 	codeEl.each(function() {
 		var that = $(this);
 		var text = that.html();
-		that.text(text).html(); // Replace contents with escaped
+		that.text(text); // Replace contents with escaped
 		return copyAllCode(that, text); // Send Scope and unescaped text
 	});
 }

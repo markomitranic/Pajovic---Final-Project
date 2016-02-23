@@ -7,8 +7,9 @@
 /* 5. Content Section General Style */
 /* 6. Category Page Content Section */
 /* 7. Blog Page Content Section */
+/* 8. Landing page interactive hero */
 
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,400italic,300italic,300);
 
 
 /* 1. GENERAL STYLES */
@@ -182,33 +183,36 @@ footer p {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     margin: 0 calc((100% - (5 * 140px)) / 2); /* 100% - 5 articles */
+    font-family: 'Open Sans', sans-serif;
 }
 #posts article {
 	width: 140px;
 	margin-top: 30px;
 }
 #posts article:hover img {
-	border: 1px solid black;
+	// border: 1px solid #DAE6E1;
 }
 #posts article .hoverArrow { /* For performance, we style the arrow first */
-	display: none;
+	display: block;
+    opacity: 0;
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: white;
-    opacity: 0.9;
+    background-color: #DAE6E1;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    color: black;
+    color: white;
     font-size: 24px;
+    font-weight: 700;
     line-height: 60px;
     text-align: center;
+    transition: 0.2s all ease-in-out;
 }
 #posts article:hover .hoverArrow { /* On hover we only need to change display model */
-    display: block;
+    opacity: 0.9;
 }
 #posts article a {
 	text-decoration: none;
@@ -269,19 +273,23 @@ footer p {
     padding: 0 15px;
 }
 #posts article header p, #posts article header h2 {
-	font-family: 'Open Sans Condensed', sans-serif;
     color: #bbbbbb;
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 14px;
+    transition: 0.2s all ease-in-out;
 }
 #posts article header h2 {
 	color: black;
+    font-weight: 700;
+}
+#posts article:hover header p, #posts article:hover header h2 {
+    background-color: #DAE6E1;
+    color: white;
 }
 
 /* 7. BLOG PAGE CONTENT SECTION */
 
-.post {
-
-}
 .post header h1 {
     text-transform: none;
 }
@@ -289,15 +297,28 @@ footer p {
     width: 600px;
     margin: 0 auto;
     padding-left: 60px;
+    font-family: 'Open Sans', sans-serif;
 }
 #container p {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 18px;
     color: #4A4A4A;
     font-weight: 300;
 }
 #container img {
     max-width: 100%;
     margin: 14px 0;
+}
+#container a {
+    color: #cc0404;
+    text-decoration: none;
+    border-bottom: 1px dotted #cc0404;
+    transition: 0.2s all ease-in-out;
+}
+#container a:hover {
+    background-color: #DAE6E1;
+    color: white;
+    border-bottom: 1px dotted gray;
 }
 #container blockquote {
     border-left: 2px solid #C1C1C1;
@@ -359,3 +380,29 @@ footer p {
     padding: 0 0 0 20px;
     margin: 5px 0;
 }
+#container hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: gray;;
+}
+
+/* 8. LANDING PAGE INTERACTIVE HERO */
+/* The langing page has a special box with an animated hero in it. */
+#landingHero {
+    display: block;
+    width: 640px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    position: relative;
+}
+#landingHero .fallback {
+    height: 100%;
+}
+
+#landingHero div {
+    position: absolute;
+    z-index: 10;
+}
+
