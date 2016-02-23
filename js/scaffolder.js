@@ -28,8 +28,6 @@ var Scaffolder = {
 
 
 
-//
-
 
 // We cache the window frame object for a bit of speed.
 var WindowFrame = $(window);

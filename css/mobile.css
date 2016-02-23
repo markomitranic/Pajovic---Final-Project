@@ -109,7 +109,14 @@ h1 {
             transform: skewX(65deg);
 }
 
-
+/* 3. TABLET BLOGPOST PAGE */
+/* Blogpost is mostly fine as is in tablet form. */
+main header {
+    margin: 50px auto;
+}
+#container {
+    padding-left: 0px;
+}
 
 
 } /* End of TABLET! */
@@ -208,6 +215,15 @@ h1 {
 #posts article .hoverArrow {
     top: 50%;
     left: 20%;
+}
+
+/* 3. TABLET BLOGPOST PAGE */
+/* Blogpost is mostly fine as is in tablet form. */
+
+#container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 
