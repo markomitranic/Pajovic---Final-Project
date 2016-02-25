@@ -61,3 +61,26 @@ function copyAllCode(that, input) {
 		$('#clipboardArea').remove();
 	}
 }
+
+(function(){
+	var scrollEl = $('.icon-scroll');
+	var windowHeight = $(window).height();
+	var documentHeight = $(document).height();
+
+	$(window).scroll(function (event) {
+	    var scroll = $(window).scrollTop();
+	    var percent = scrollPercent(scroll);
+	    animate(percent);
+	});
+
+	function scrollPercent(pxFromTop) {
+	    var onePercentInPx = (documentHeight - windowHeight) / 100;
+	    var result = Math.floor(pxFromTop / onePercentInPx);
+		return result;
+	}
+	function animate(percent) {
+		scrollEl.css('height', percent + "%");
+	}
+})();
+
+

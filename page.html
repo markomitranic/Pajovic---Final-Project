@@ -20,14 +20,15 @@
 <div id="sidebar">
 	<nav>
 		<ul>
-			<li><a href="#">Projects</a></li>
-			<li><a href="#" class="selected">Workshops</a></li>
-			<li><a href="#">Images</a></li>
-			<li><a href="#">About me</a></li>
+			<li><a href="category.html">Projects</a></li>
+			<li><a href="category.html" class="selected">Workshops</a></li>
+			<li><a href="category.html">Images</a></li>
+			<li><a href="index.html">Landing</a></li>
 		</ul>
 	</nav>
 	<div id="logo">
 		<div class="icon-wrap">
+			<div class="icon-scroll"></div>
  			<div class="icon-pill"></div>
 		</div>
 	</div>
@@ -39,6 +40,16 @@
 	<section id="container">
 
 		<h2>bachelor thesis studio project</h2>
+
+		<p class="date">
+			Stardate 
+			<time datetime="2016-02-22T00:55:28-05:00">
+				22.05.2016
+			</time>
+		</p>
+			<!-- <time datetime="<?php the_time('c'); ?>">
+				<?php the_time('l, F j, Y'); ?>
+			</time> -->
 
 		<p>Deals primarily with the reinterpretation of semiotic values associated with the notion of housing and their effect on the possibilities of form, and secondarily with the form itself as a firmly set product</p>
 
@@ -88,14 +99,54 @@
 		<p><strong>Monument to History</strong> – Evansville, IN, is celebrated as the pioneer and the leader in innovation in the tri-state area and the wider region – an illuminator in its own right.</p>
 
 		<p><em>With special thanks to Ashley Miller (Evansville native and USI student), Jovana Kurcubic and Amina Lekpek (who both attended USI during the academic year of 2012/2013)</em></p>
-
+		<hr>
 	</section>
+	<aside class="relatedItems">
+	<header>☞ Further reading:</header>
+		<article>
+			<a href="#">
+				<img src="img/summaSummarum140x140.jpg" alt="">
+				<h1>Summa sumarum: A view of universe</h1>
+				<p>Workshops</p>
+			</a>
+		</article>
+		<article>
+			<a href="#">
+				<img src="img/museum140x140.jpg" alt="">
+				<h1>museum ofEverything: new synthesis of kalenić marketplace</h1>
+				<p>Projects</p>
+			</a>
+		</article>
+		<article>
+			<a href="#">
+				<img src="img/polyvalent140x140.jpg" alt="">
+				<h1>Polyvalent organisations within the nucleus structure</h1>
+				<p>Images</p>
+			</a>
+		</article>
+		<article>
+			<a href="#">
+				<img src="img/studentHousing140x140.jpg" alt="">
+				<h1>the space of: rethinking student housing</h1>
+				<p>Workshops</p>
+			</a>
+		</article>
+	</aside>
 	<footer>
-		<p>Copyright &copy 2015 Uroš Pajović</p>
+		<nav>
+			<ul>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Impressum</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Legal</a></li>
+				<li><a href="#">Hire me</a></li>
+			</ul>
+		</nav>
+		<p>Contact me: <a href="mailto:#">✍ by email</a> | Copyright &copy 2015 Uroš Pajović</p>
 	</footer>
 </main>
 <a href="#"><img id="upArrow" src="img/comps/up-arrow-circle-hi.png" alt="Up Arrow"></a>
-<script src="/js/scaffolder.js"></script>
-<script src="/js/functions.js"></script>
+<script src="js/scaffolder.js"></script>
+<script src="js/functions.js"></script>
 </body>
 </html>

@@ -36,6 +36,7 @@ h2 {
     color: black;
     font-size: 1.5em;
     font-weight: bold;
+    text-transform: uppercase;
 }
 h3, h4, h5, h6 {
     color: #4A4A4A;
@@ -63,6 +64,8 @@ figcaption::before {
 	float: left;
 	padding-left: 10px;
 	box-sizing: border-box;
+    position: fixed;
+    top: 0;
 }
 #sidebar nav {
 	margin-bottom: 10px;
@@ -105,9 +108,9 @@ figcaption::before {
     line-height: 66px;
 }
 #sidebar nav li:nth-child(4) a {
-	font-size: 50px;
-    height: 50px;
-    line-height: 50px;
+	font-size: 58px;
+    height: 58px;
+    line-height: 58px;
 }
 
 /* 3. PILL ICON INCLINOMETER */
@@ -120,6 +123,12 @@ figcaption::before {
     transition: 0.5s all ease-in-out;
     border: 2px solid #dadada;
     position: relative;
+}
+.icon-scroll {
+    height: 0%;
+    width: 100%;
+    background-color: #DAE6E1;
+    position: absolute;
 }
 .icon-pill {
 	height: 20px;
@@ -145,11 +154,48 @@ figcaption::before {
 
 /* 4. FOOTER */
 /* Footer only has a few basic properties, since footer is only the copyright text. */
-footer p {
-    text-align: right;
-    padding: 20px;
+footer {
+    width: 600px;
+    margin: 0 auto;
+    padding-left: 60px;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     color: #bbbbbb;
+}
+footer a {
+    color: #bbbbbb;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbbbbb;
+    transition: 0.2s all ease-in-out;
+}
+footer a:hover {
+    background-color: #DAE6E1;
+    color: white;
+    border-bottom: 1px dotted gray;
+}
+footer nav {
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+footer nav li {
+    display: inline;
+}
+footer nav li:after {
+    content: " | ";
+}
+footer nav li:nth-last-child(1):after {
+    display: none;
+}
+footer p {
+    text-align: center;
+    padding: 0 0 20px 0;
+    margin: 0;
 }
 #upArrow {
     display: none;
@@ -188,9 +234,7 @@ footer p {
 #posts article {
 	width: 140px;
 	margin-top: 30px;
-}
-#posts article:hover img {
-	// border: 1px solid #DAE6E1;
+    transition: 0.2s all ease-in-out;
 }
 #posts article .hoverArrow { /* For performance, we style the arrow first */
 	display: block;
@@ -204,7 +248,7 @@ footer p {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     font-size: 24px;
     font-weight: 700;
     line-height: 60px;
@@ -212,7 +256,7 @@ footer p {
     transition: 0.2s all ease-in-out;
 }
 #posts article:hover .hoverArrow { /* On hover we only need to change display model */
-    opacity: 0.9;
+    opacity: 1;
 }
 #posts article a {
 	text-decoration: none;
@@ -270,13 +314,20 @@ footer p {
 #posts article header {
     margin-top: 25px;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 5px 15px;
+    transition: 0.2s all ease-in-out;
+}
+#posts article:hover {
+    opacity: 0.5;
+}
+#posts article:hover header {
+    background-color: #DAE6E1;
 }
 #posts article header p, #posts article header h2 {
     color: #bbbbbb;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 300;
-    line-height: 14px;
+    line-height: 19px;
     transition: 0.2s all ease-in-out;
 }
 #posts article header h2 {
@@ -284,20 +335,22 @@ footer p {
     font-weight: 700;
 }
 #posts article:hover header p, #posts article:hover header h2 {
-    background-color: #DAE6E1;
-    color: white;
+    color: black;
 }
 
 /* 7. BLOG PAGE CONTENT SECTION */
 
-.post header h1 {
-    text-transform: none;
-}
 #container {
     width: 600px;
     margin: 0 auto;
     padding-left: 60px;
     font-family: 'Open Sans', sans-serif;
+}
+#container .date {
+    font-style: italic;
+    color: gray;
+    font-weight: 300;
+    font-family: serif;
 }
 #container p {
     font-size: 12px;
@@ -385,7 +438,73 @@ footer p {
     border-bottom: 1px dashed #ccc;
     background: gray;;
 }
-
+.relatedItems {
+    width: 600px;
+    margin: 0 auto;
+    padding-left: 60px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+.relatedItems header {
+    width: 100%;
+    margin: 15px 0;
+}
+.relatedItems article {
+    height: 70px;
+    width: 294px;
+    position: relative;
+    margin: 3px;
+    overflow: hidden;
+    background-color: #DAE6E1;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.relatedItems article:hover {
+    opacity: 0.5;
+}
+.relatedItems article img {
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.relatedItems article h1 {
+    width: 220px;
+    height: 34px;
+    position: absolute;
+    top: 3px;
+    left: 70px;
+    overflow: hidden;
+    font-size: 12px;
+    color: white;
+    line-height: 17px;
+    transition: 0.3s all ease-in-out;
+}
+.relatedItems article:hover h1 {
+    color: black;
+}
+.relatedItems article p {
+    width: 220px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 3px;
+    left: 70px;
+    overflow: hidden;
+    font-size: 12px;
+    color: gray;
+    line-height: 30px;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: 0.3s all ease-in-out;
+}
+.relatedItems article:hover p {
+    color: black;
+}
 /* 8. LANDING PAGE INTERACTIVE HERO */
 /* The langing page has a special box with an animated hero in it. */
 #landingHero {
@@ -393,16 +512,20 @@ footer p {
     width: 640px;
     height: 500px;
     overflow: hidden;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
     text-align: center;
     position: relative;
 }
 #landingHero .fallback {
     height: 100%;
 }
-
 #landingHero div {
     position: absolute;
     z-index: 10;
+}
+figcaption.landingHeroCaption {
+    width: 640px;
+    margin: 20px auto;
+    font-family: 'Open Sans', sans-serif;
 }
 

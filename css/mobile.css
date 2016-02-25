@@ -35,6 +35,7 @@ h1 {
 	width: 415px;
     margin: 0 auto;
     min-height: initial;
+    position: initial;
 }
 #sidebar nav {
 	float: left;
@@ -60,6 +61,12 @@ h1 {
     bottom: 104px;
 }
 /*FOOTER*/
+footer {
+    max-width: 640px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 #upArrow {
     display: block;
 }
@@ -124,6 +131,13 @@ main header {
     font-size: 14px;
     line-height: 21px;
 }
+.relatedItems {
+    max-width: 640px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
 
 /* 8. LANDING PAGE INTERACTIVE HERO */
 /* The langing page has a special box with an animated hero in it. */
@@ -134,8 +148,11 @@ main header {
     box-sizing: border-box;
 }
 #landingHero .fallback {
-    height: auto;
-    max-width: 100%;
+    height: 100%;
+    width: auto;
+}
+figcaption.landingHeroCaption {
+    width: 100%;
 }
 
 } /* End of TABLET! */
@@ -160,6 +177,14 @@ main>header {
 }
 #logo {
     display: none;
+}
+.icon-scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: auto;
+    opacity: 0.9;
 }
 #sidebar {
     width: 100%;
@@ -246,6 +271,15 @@ main>header {
     top: 50%;
     left: 20%;
 }
+#posts article header h2, #posts article header p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+    font-weight: 700;
+}
+.relatedItems article p {
+    text-align: center;
+}
 
 /* 3. TABLET BLOGPOST PAGE */
 /* Blogpost is mostly fine as is in tablet form. */
@@ -255,8 +289,13 @@ main>header {
     padding: 0 10px;
     box-sizing: border-box;
 }
+#container .date {
+    text-align: center;
+}
 
-
+#landingHero {
+    max-height: 330px;
+}
 
 
 

@@ -24,7 +24,7 @@ function landingHeroInit() {
                 drg_w = $drag.outerWidth(),
                 pos_y = $drag.offset().top + drg_h - e.pageY,
                 pos_x = $drag.offset().left + drg_w - e.pageX;
-            $drag.parents().on("mousemove", function(e) {
+            $drag.css('z-index', '1000').parents().on("mousemove", function(e) {
                 $('.draggable').offset({
                     top:e.pageY + pos_y - drg_h,
                     left:e.pageX + pos_x - drg_w
@@ -57,7 +57,7 @@ function divCreate(object) {
 // We will cache the frame element for faster querying
 var landingHero = $('#landingHero');
 // Now, do some maintenance, hide the fallback and similar stuff
-landingHero.css('background-color', '#edece0').find('.fallback').hide();
+landingHero.css('background-color', '#edece0').children().hide();
 
 // Create all the divs!!!
 divCreate({
